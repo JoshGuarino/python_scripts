@@ -1,5 +1,5 @@
 import os
-path = "C:\\Users\\Josh\\Documents\\programs\\code_breaker"
+path = input('Please enter the file path with two backslahses separating directories:\n')
 cur_dir = os.listdir(path)
 print(path)
 
