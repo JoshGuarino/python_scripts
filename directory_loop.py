@@ -1,4 +1,4 @@
-#Prints names of all files and folder in directory entered
+#Prints names of all files and folder in directory entered for windows OS
 
 import os
 path = input('Please enter the file path with two backslahses separating directories:\n')
