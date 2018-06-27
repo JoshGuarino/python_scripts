@@ -1,3 +1,5 @@
+#Prints names of all files and folder in directory entered
+
 import os
 path = input('Please enter the file path with two backslahses separating directories:\n')
 cur_dir = os.listdir(path)
