@@ -9,9 +9,12 @@ def nav_subdir(cur_path, path_spacing):
     path_spacing = path_spacing + "         " 
     for file_name2 in new_dir:
         if "." not in file_name2:
+            path_len = len(cur_path)
             print(path_spacing + "-" + file_name2)
             cur_path = cur_path + "\\" + file_name2
             nav_subdir(cur_path, path_spacing)
+            trim_len = len(cur_path) - path_len
+            cur_path = cur_path[:-trim_len]
         else:
             print(path_spacing + file_name2)
             
