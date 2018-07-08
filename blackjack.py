@@ -1,6 +1,5 @@
 import random
-still_playing = False
-
+still_playing = True
 #class constructor for cards
 class card:
     def __init__(self, suit, card_name, card_value):
@@ -40,9 +39,9 @@ class dealer:
         self.hand.append(deck_.pop())
     def deal(self, deck_, player_):
         for i in range (2):
-            self.hand.append(deck_.pop())
+            self.hand.append(deck_.current_deck.pop())
         for i in range (2):
-            player_.hand.append(deck_.pop())
+            player_.hand.append(deck_.current_deck.pop())
     def strategy(self):
         print()
     def take_back_cards(self, deck_, player_):
@@ -67,19 +66,30 @@ print('Welcome to blackjack on the command line,\nYou have $200 to start with go
 user = input('Please enter your name:\n')
 Player = player(user)
 
+#create the dealer
+Dealer = dealer()
+
 #create a deck that is shuffled
 playing_deck = deck()
 playing_deck.initialize()
 playing_deck.shuffle()
 
-playing_deck.initialize()
-playing_deck.shuffle()
+while still_playing == True:
+    
 
+
+Dealer.deal(playing_deck, Player)
+
+for i  in range(len(Player.hand)):
+    print(vars(Player.hand[i]))
+
+for i  in range(len(Dealer.hand)):
+    print(vars(Dealer.hand[i]))
 
 #Player.hit(playing_deck.current_deck)
 
 #print(vars(Player))
-for i in range(len(playing_deck.current_deck)):
-    print(vars(playing_deck.current_deck[i]))
+#for i in range(len(playing_deck.current_deck)):
+    #print(vars(playing_deck.current_deck[i]))
 
 
