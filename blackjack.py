@@ -198,6 +198,10 @@ while still_playing == True:
             still_playing = False
             right_syntax = True
             print('You have run out of money, better luck next time!')
+        elif Dealer.money < 0:
+            still_playing = False
+            right_syntax = True
+            print('Congrats you have broken the house!!!!!!!!')
         else:
             cont = input('Would you like to continue playing? You can enter y/n for yes/no:\n')
             if (cont.lower()=='y' or cont.lower()=='yes'):
