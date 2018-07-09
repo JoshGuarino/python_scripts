@@ -6,7 +6,7 @@ spec_char = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '<', '>', '?']
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'] 
 alphabet_upper = []
 for i in range(len(alphabet)):
-    alphabet_upper.append(alphabet[i].upper())
+    alphabet_upper.append(alphabet[i].upper())-
 
 for j in range(pass_len):
     switch = random.randint(1, 4)
