@@ -1,3 +1,5 @@
+#black jack command line game
+
 import random
 still_playing = True
 #class constructor for cards
