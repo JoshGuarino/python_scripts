@@ -10,7 +10,7 @@ while status == False:
         print("Error 404 not found.")
         host_name = input('Enter the host name or IP address: \n')
         
-ip_local = socket.gethostbyname(socket.gethostname()) # local IP adress of your computer
+ip_local = socket.gethostbyname(socket.gethostname()) # local IP address of your computer
 print('host IP: ' + ip)
 print('local IP: ' + ip_local)
 

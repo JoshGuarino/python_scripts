@@ -131,12 +131,14 @@ while still_playing == True:
     while bet_status == False:
         try:
             bet = int(input('Please enter the amount of money you want to bet: \n'))
-            while bet > Player.money:
+            if bet > Player.money:
                 print('You have entered a bet that is greater than the amount of money you have.')
-                bet = int(input('Please enter the amount of money you want to bet: \n'))
-            Player.money -= bet
-            Dealer.money += bet
-            bet_status = True
+            elif bet <= 0:
+                print('You have entered a bet that is 0 or negative.')
+            else:
+                Player.money -= bet
+                Dealer.money += bet
+                bet_status = True
         except ValueError:
             print('Error, you must enter a numerical money value.')
     
